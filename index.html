@@ -3,116 +3,216 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agreement Terms and Conditions | List Growth Solutions LLC</title>
+  <title>List Growth Solutions LLC | Premium Email Publications</title>
+  <meta name="description" content="List Growth Solutions LLC is a digital publishing company producing seven trusted email newsletters covering news, politics, investing, history, and lifestyle." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, 'Times New Roman', serif; background: #f8f7f4; color: #1a1a1a; line-height: 1.75; }
-    header { background: #0d1b2a; color: #fff; padding: 2.5rem 1.5rem; text-align: center; }
-    header h1 { font-size: clamp(1.25rem, 3vw, 1.9rem); font-family: Arial, sans-serif; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-    header p { margin-top: .5rem; font-size: .9rem; color: #a0b0c0; font-family: Arial, sans-serif; }
-    .container { max-width: 860px; margin: 3rem auto; padding: 0 1.5rem 4rem; }
-    .intro { background: #fff; border-left: 4px solid #0d1b2a; padding: 1.5rem 2rem; margin-bottom: 2.5rem; font-size: .95rem; line-height: 1.8; border-radius: 0 4px 4px 0; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-    .intro strong { display: block; font-family: Arial, sans-serif; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: #0d1b2a; margin-bottom: .75rem; }
-    .section { background: #fff; border-radius: 6px; padding: 1.75rem 2rem; margin-bottom: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-    .section h2 { font-family: Arial, sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: #0d1b2a; margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 1px solid #e5e0d8; }
-    .section p { font-size: .93rem; color: #2c2c2c; }
-    footer { text-align: center; padding: 2rem 1rem; background: #0d1b2a; color: #7a8fa0; font-family: Arial, sans-serif; font-size: .8rem; }
-    @media (max-width: 600px) { .section { padding: 1.25rem; } .intro { padding: 1.25rem; } }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f7f4;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    header p.tagline {
+      margin-top: 0.75rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #a0b8cc;
+      font-style: italic;
+    }
+
+    /* INTRO */
+    .intro-section {
+      max-width: 760px;
+      margin: 3rem auto 1rem;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .intro-section h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      margin-bottom: 1rem;
+    }
+    .intro-section p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.8;
+    }
+
+    /* PUBLICATIONS GRID */
+    .publications {
+      max-width: 1100px;
+      margin: 3rem auto 4rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .pub-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pub-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .pub-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 1.25rem;
+      background: #f0eeea;
+      padding: 6px;
+    }
+
+    .pub-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0d1b2a;
+      margin-bottom: 0.6rem;
+    }
+
+    .pub-card p {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.6;
+      flex-grow: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .pub-card a {
+      display: inline-block;
+      background: #0d1b2a;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1.4rem;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+    .pub-card a:hover {
+      background: #1a3a5c;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1b2a;
+      color: #7a8fa0;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+      line-height: 2;
+    }
+    footer a {
+      color: #a0b8cc;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .publications { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>List Growth Solutions LLC</h1>
-  <p>Agreement &mdash; Terms and Conditions</p>
+  <p class="tagline">Connecting readers with content they love, every single day.</p>
 </header>
 
-<div class="container">
+<div class="intro-section">
+  <h2>We Publish Newsletters People Actually Look Forward To</h2>
+  <p>At List Growth Solutions LLC, we build and grow email publications that inform, entertain, and inspire. From daily news briefings and market insights to nostalgic stories and lifestyle tips, our seven newsletters reach engaged readers across the country — straight to their inbox, every day.</p>
+</div>
 
-  <div class="intro">
-    <strong>Important Notice</strong>
-    PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY. THIS IS A LEGALLY BINDING AGREEMENT THAT AFFECTS THE RIGHTS AND OBLIGATIONS OF THE PARTIES. These Terms and Conditions apply to all orders including orders communicated solely via email, which shall be binding upon acceptance, (each an &ldquo;Insertion Order&rdquo;) entered into between List Growth Solutions LLC (&ldquo;Publisher or List Growth Solutions LLC&rdquo;), and client(s) (&ldquo;Advertiser(s)&rdquo;), and shall be deemed incorporated into each Insertion Order signed by List Growth Solutions LLC. These Terms and Conditions and all Insertion Orders, collectively the &ldquo;Agreement,&rdquo; shall constitute the entire agreement between List Growth Solutions LLC and the client. All campaigns are accepted according to provisions of this Agreement. Neither party will be bound by the conditions printed or appearing on order blanks or copy instructions that conflict with the provisions of this Agreement. In the event of a direct conflict between the provisions of these Terms and Conditions and any Insertion Order, the terms of the insertion order shall control.
+<div class="publications">
+
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,fit=scale-down,onerror=redirect/uploads/asset/file/015315e2-55de-4ba3-b9ca-d1273e225930/Beige_and_Dark_Brown_Simple_Minimalist_Bookstore_Circle_Logo__45_.png" alt="Morning Bullets logo" />
+    <h3>Morning Bullets</h3>
+    <p>Where politics meets investing. Five sharp bullets every morning covering market movers, policy catalysts, and actionable trade ideas — before your first coffee.</p>
+    <a href="https://morningbullets.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>1. Payment</h2>
-    <p>Each Insertion Order is placed with List Growth Solutions LLC as an order confirmation for Advertisers&rsquo; media placement within the Publisher&rsquo;s network of products. Payment, pursuant to each active Insertion Order, is to be delivered before any campaign begins unless determined and expressly agreed upon by List Growth Solutions LLC. If the Advertiser defaults on payment to List Growth Solutions LLC said Advertiser is to be held solely responsible. Any amount due and owing to List Growth Solutions LLC for greater than thirty (30) days shall be subject to interest at a rate of 10% annually or the greatest amount permitted by law, whichever percentage is lower. Additionally, Advertiser shall be liable for all expenses incurred by List Growth Solutions LLC to recover monies due and owing under this Agreement. Except as set forth in Section 2, purchases of leads are not cancellable, and fees paid are not refundable. Advertiser is prohibited from using any leads provided by List Growth Solutions LLC in the event that Advertiser has failed to satisfy its payment obligation set forth above or has otherwise breached this Agreement. Advertiser represents and warrants that List Growth Solutions LLC has the right to distribute on its behalf.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/f3ecb8f7-3f84-436a-b4cb-1dcea5e8d50c/BU800x800Logov2.png" alt="Brief Updates logo" />
+    <h3>Brief Updates</h3>
+    <p>A fair, well-rounded look at today's news. Brief Updates cuts through the noise to bring you balanced, concise coverage of the stories shaping the world right now.</p>
+    <a href="https://briefupdates.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>2. Tracking</h2>
-    <p>List Growth Solutions LLC will use commercially reasonable efforts to deliver the media evenly across the term, starting with the start date and ending with the end date set forth in the purchase order. List Growth Solutions LLC&rsquo;s ad server will be the official counter for determining the number of ads/leads delivered and click-through/opt-in statistics for all payments due pursuant to this Agreement. However, List Growth Solutions LLC and Advertiser agree to investigate in good faith when Advertiser&rsquo;s reporting exceeds a 10% variance from the numbers reported by List Growth Solutions LLC&rsquo;s ad server. Advertisers must provide written notice via email of discrepancy in reporting by the fifth (5th) calendar day of the month following the month in which the leads were delivered. If no written notice is received by the fifth (5th) calendar day, the lead is accepted by Advertiser and Advertiser shall be required to pay for such lead according to this Agreement.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/asset/file/f64ba562-d251-47ff-ac1c-1850e2bba54b/Backyard_Legends.png" alt="Backyard Legends logo" />
+    <h3>Backyard Legends</h3>
+    <p>Timeless tips and tales for the everyday American. From fishing knots to morning routines, Backyard Legends celebrates the practical wisdom and simple joys of life well lived.</p>
+    <a href="https://thebalancedbrief.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>3. Compliance</h2>
-    <p>It is Advertiser&rsquo;s sole responsibility to be familiar with all laws and regulations applicable to the receipt, use, storage and safeguarding of leads and data provided by List Growth Solutions LLC or maintained by Advertiser in connection with Advertiser&rsquo;s use of List Growth Solutions LLC&rsquo;s services. Advertiser agrees to maintain commercially reasonable physical, electronic and procedural controls and safeguards to protect any such information received pursuant to this Agreement from unauthorized use or disclosure, including the maintenance of appropriate safeguards to restrict access to the consumer data solely to carry out the purposes for which the information was disclosed.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/publication/logo/e5634245-2ca2-4f41-87cf-5ffbb2f90e07/DR800x800Logo.png" alt="The Daily Recap logo" />
+    <h3>The Daily Recap</h3>
+    <p>Never lose sleep about what you might have missed. The Daily Recap delivers a comprehensive, easy-to-read roundup of the day's most important news — so you're always in the know.</p>
+    <a href="https://dailyrecap.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>4. Cancellation and Termination</h2>
-    <p>List Growth Solutions LLC reserves the right not to publish any proposed advertisements; provided, however, that in the event List Growth Solutions LLC does not object to any proposed advertisements, this Agreement and any campaign that has commenced may be terminated only after 24 hours written notice by either party. Cancellations will take effect 24 hours from the date of written notification. Any changes to an Insertion Order or to the advertising programs contemplated by an Insertion Order must be submitted in writing to List Growth Solutions LLC and will be effective 24 hours after receipt of such changes by List Growth Solutions LLC. In the event Advertiser cancels any Insertion Order before it is completed, Advertiser shall receive no protections offered in Section 2 above with regard to tracking; rather, Advertiser shall be responsible for all impressions served at List Growth Solutions LLC&rsquo;s discretion.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/publication/logo/354769f3-6dab-4d2c-b110-83192aa5176a/LC800x800Logo.png" alt="The Local Conservative logo" />
+    <h3>The Local Conservative</h3>
+    <p>News for every conservative. The Local Conservative delivers straightforward reporting and opinion on the political stories that matter most to readers who value tradition and common sense.</p>
+    <a href="https://localconservative.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>5. Modifications</h2>
-    <p>List Growth Solutions LLC reserves the right to make changes to these Terms and Conditions at any time and at its discretion. Any new feature or tool added to our website or services shall be subject to these Terms and Conditions, as amended. New versions of these Terms and Conditions will not apply retroactively, but shall immediately replace and supersede the previous Terms and Conditions upon posting. Advertiser&rsquo;s continued use of our website and services, or any part thereof, following the posting of the revised Terms and Conditions means Advertiser accepts and agrees to the changes.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/asset/file/0897d591-7bea-45b2-b705-c36b798e5be1/newnewLogo.png" alt="Those Were the Days logo" />
+    <h3>Those Were the Days</h3>
+    <p>Your nightly trip back to the good old days. Seven heart-warming memories from America's Golden Era (1950s–1980s), delivered every evening at 7 PM to end your day with a smile.</p>
+    <a href="https://the7at7.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
-  <div class="section">
-    <h2>6. Confidentiality</h2>
-    <p>For the purposes of this Agreement, &ldquo;Confidential Information,&rdquo; includes the terms of this Agreement, leads and consumer information provided hereunder, any material labeled &ldquo;Confidential,&rdquo; and any documents or material which by their nature would be considered confidential. Confidential Information excludes information that the receiving party can document: (i) is or becomes generally available to the public without fault of the receiving party; (ii) was rightfully in the receiving party&rsquo;s possession prior to its disclosure by the other party; (iii) is independently developed without the use of any Confidential Information of the disclosing party; or (iv) is obtained without obligation of confidentiality from a third party who has the right to disclose it. The receiving party also may disclose Confidential Information to the extent required under a judicial or legislative order or proceeding or as necessary to comply with open records acts or other freedom of information laws or regulations; provided that it gives the disclosing party, if legally permissible, reasonable prior notice and an opportunity to respond or object to the disclosure. All Confidential Information provided by the disclosing party will be maintained in confidence by the receiving party, and the receiving party will not, during the course of this Agreement and following the expiration or termination of this Agreement, divulge to any person or organization, or use in any manner whatsoever, directly or indirectly, for any reason whatsoever, any of the Confidential Information without receiving the prior written consent of disclosing party. In the event this Agreement is terminated for any reason, or at any time upon the request of the disclosing party, the receiving party agrees to return or destroy such Confidential Information, at the option of the disclosing party, not including any information required for the receiving party to use or provide their respective services.</p>
-  </div>
-
-  <div class="section">
-    <h2>7. Indemnification</h2>
-    <p>Advertiser(s) agrees to indemnify and hold List Growth Solutions LLC and its affiliates and its and their respective employees, agents, officers, and directors (collectively, &ldquo;Indemnitees&rdquo;) harmless from and against any and all liability, loss, cost, damage, expense, claim or cause of action, including reasonable attorneys&rsquo; fees and expenses, arising out of Advertiser&rsquo;s acts, omissions, and breach, or alleged breach, of this Agreement.</p>
-  </div>
-
-  <div class="section">
-    <h2>8. Class Action Waiver</h2>
-    <p>Advertiser hereby independently waives its right to bring or participate in any class action in any way related to, or arising from, this Agreement.</p>
-  </div>
-
-  <div class="section">
-    <h2>9. Limitation of Liability</h2>
-    <p>UNDER NO CIRCUMSTANCES SHALL ANY OF THE INDEMNITEES BE LIABLE FOR INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR EXEMPLARY DAMAGES (EVEN IF SUCH DAMAGES ARE FORESEEABLE, AND WHETHER OR NOT LIST GROWTH SOLUTIONS LLC HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES) ARISING FROM ANY ASPECT OF THE ADVERTISING RELATIONSHIP PROVIDED FOR HEREIN. IN ADDITION, NEITHER LIST GROWTH SOLUTIONS LLC NOR ANY OF THE INDEMNITEES SHALL BE LIABLE FOR THE CONTENT OF ANY ADVERTISEMENTS PROVIDED BY THE ADVERTISER. NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, IN NO EVENT SHALL LIST GROWTH SOLUTIONS LLC OR ANY OF THE INDEMNITEES BE LIABLE FOR MORE THAN THE LESSER OF (A) THE AMOUNT ACTUALLY PAID TO LIST GROWTH SOLUTIONS LLC BY ADVERTISER FOR THE MONTH PRIOR TO THE MONTH IN WHICH THE CLAIM WAS MADE AGAINST LIST GROWTH SOLUTIONS LLC BY ADVERTISER AND (B) $5,000.</p>
-  </div>
-
-  <div class="section">
-    <h2>10. Disclaimer of Warranties</h2>
-    <p>LIST GROWTH SOLUTIONS LLC ON BEHALF OF ITSELF AND THE INDEMNITEES, MAKES NO REPRESENTATION, AND HEREBY EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, REGARDING LIST GROWTH SOLUTIONS LLC&rsquo;S SERVICES OR ANY PORTION THEREOF OR THE AVAILABILITY THEREOF FOR ANY REASON, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE AND IMPLIED WARRANTIES ARISING FROM COURSE OF DEALING OR COURSE OF PERFORMANCE OR NON-INFRINGEMENT. WITHOUT LIMITING THE GENERALITY OF THE FOREGOING, LIST GROWTH SOLUTIONS LLC SPECIFICALLY DISCLAIMS ANY WARRANTY REGARDING (I) THE NUMBER OF PERSONS WHO WILL ACCESS THE IMPRESSION AND (II) ANY BENEFIT ADVERTISER MIGHT OBTAIN FROM DISPLAYING THE IMPRESSIONS.</p>
-  </div>
-
-  <div class="section">
-    <h2>11. Campaign Placements &amp; Restrictions on Use of Leads</h2>
-    <p>List Growth Solutions LLC shall use commercially reasonable efforts to ensure that its system remains in operation and that the advertisements are not placed in any context that harms the goodwill or reputation of the advertiser or that disparages or brings any advertiser into disrepute, including, but not limited to web sites that contain indecent, illegal, misleading, harmful, abusive, harassing, libelous, defamatory, or other offensive materials. If Advertisers request that advertisements be removed from or not placed in any such context, List Growth Solutions LLC will use commercially reasonable efforts to comply with such request promptly. Furthermore, List Growth Solutions LLC will not display any &ldquo;Creatives&rdquo; that contain or advertise adware, spyware, silent installs, Trojans, viruses, and may not be bundled on top of List Growth Solutions LLC if installed. Leads and related marketing services are provided on a non-exclusive basis for a specific type of product or service. Advertiser is authorized to use the leads and related marketing services provided by List Growth Solutions LLC solely for Advertiser&rsquo;s marketing purposes of proposing its products and services in the specific vertical to the consumer. Leads and the related marketing services are confidential information of List Growth Solutions LLC. ADVERTISER AGREES NOT TO SHARE WITH OTHERS, LICENSE, RESELL, DISTRIBUTE OR OTHERWISE DISCLOSE ANY OR ALL OF THE LEADS OR SERVICES OR THE INFORMATION CONTAINED IN THEM, ALONE OR AS PART OF A LIST OR ANY OTHER DATA OR LEAD AGGREGATION, TO ANY THIRD PARTY FOR ANY PURPOSE, EXCEPT ONLY TO AN ENTITY ENGAGED BY ADVERTISER AS A CONTRACTOR FOR THE SOLE PURPOSE OF ASSISTING IN CONNECTION WITH THE AUTHORIZED USE OF THE LEADS.</p>
-  </div>
-
-  <div class="section">
-    <h2>12. Force Majeure</h2>
-    <p>Neither party shall be liable for delays in delivery and/or non-delivery in the event of an act-of-god, action by any government or quasi-government entity, fire, flood, insurrection, riot, explosion, embargo, strikes whether legal or illegal, labor or material shortage, transportation interruption, of any kind, work slowdown or any conditions beyond the control of such party affecting the ability to perform under this Agreement in any manner.</p>
-  </div>
-
-  <div class="section">
-    <h2>13. Governing Law</h2>
-    <p>This Agreement will be construed in accordance with and governed by the laws of the state of Florida, without regard to principles of conflicts of law and the parties consent to the exclusive jurisdiction of state and federal courts located in Orange County, State of Florida in connection with any action, suit or proceeding concerning this Agreement.</p>
-  </div>
-
-  <div class="section">
-    <h2>14. Publicity</h2>
-    <p>List Growth Solutions LLC shall have the right to reference and refer to its work for, and relationship with, Advertiser for marketing and promotional purposes.</p>
-  </div>
-
-  <div class="section">
-    <h2>15. Miscellaneous</h2>
-    <p>This Agreement, including all attachments which are incorporated herein by reference, constitutes the entire agreement between the parties with respect to the subject matter hereof and supersedes and replaces all prior and contemporaneous understandings or agreements, written or oral, regarding such subject matter. Applicable sections shall survive the expiration or early termination of this Agreement. Nothing in this Agreement shall be deemed to create a partnership or joint venture between the parties and neither List Growth Solutions LLC nor Advertiser shall hold itself out as the agent of the other, except for that specified in this Agreement. Failure by either party to enforce any provision of this Agreement shall not be deemed a waiver of future enforcement of that or any other provision. Any waiver, amendment, or other modification of any provision of this Agreement shall be effective only if in writing and signed by the parties. If for any reason a court of competent jurisdiction finds any provision of this Agreement to be unenforceable, that provision of the Agreement shall be enforced to the maximum extent permissible so as to affect the intent of the parties, and the remainder of this Agreement shall continue in full force and effect.</p>
+  <div class="pub-card">
+    <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/5721e24b-4c2e-4b7f-b17c-9e510239fdad/todays-time-capsule-fb-profile-060525-v1__1_.jpg" alt="Today's Time Capsule logo" />
+    <h3>Today's Time Capsule</h3>
+    <p>Fun history facts and stories flying your way! Daily doses of historic tales they didn't teach in school, plus bite-sized history games and brain teasers exclusively for subscribers.</p>
+    <a href="https://todaystimecapsule.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
 </div>
 
 <footer>
-  &copy; 2026 List Growth Solutions LLC &bull; All Rights Reserved
+  &copy; 2025 List Growth Solutions LLC &bull; All Rights Reserved<br/>
+  <a href="/terms.html">Advertiser Terms &amp; Conditions</a> &bull;
+  <a href="/privacy.html">Privacy Policy</a> &bull;
+  <a href="/user-terms.html">User Terms &amp; Conditions</a>
 </footer>
 
 </body>
