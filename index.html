@@ -5,32 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>List Growth Solutions LLC | Premium Email Publications</title>
   <meta name="description" content="List Growth Solutions LLC is a digital publishing company producing seven trusted email newsletters covering news, politics, investing, history, and lifestyle." />
+  <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f8f7f4;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
       color: #1a1a1a;
       line-height: 1.7;
+      background-color: #0d1b2a;
+      background-image: url('/ny_background.jpeg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+    }
+
+    /* Dark overlay over the entire page */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 18, 30, 0.82);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Everything sits above the overlay */
+    header, .intro-section, .publications, footer {
+      position: relative;
+      z-index: 1;
     }
 
     /* HEADER */
     header {
-      background: #0d1b2a;
-      color: #fff;
-      padding: 3rem 1.5rem 2.5rem;
-      text-align: center;
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    header h1 {
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: 0.03em;
+
+    header img.logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    header .header-text h1 {
+      font-family: 'Federo', Georgia, serif;
+      font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+      font-weight: 400;
+      color: #ffffff;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
-    header p.tagline {
-      margin-top: 0.75rem;
-      font-size: clamp(1rem, 2vw, 1.2rem);
+
+    header .header-text p {
+      margin-top: 0.3rem;
+      font-size: 0.85rem;
       color: #a0b8cc;
       font-style: italic;
     }
@@ -38,20 +73,24 @@
     /* INTRO */
     .intro-section {
       max-width: 760px;
-      margin: 3rem auto 1rem;
+      margin: 3.5rem auto 1rem;
       padding: 0 1.5rem;
       text-align: center;
     }
+
     .intro-section h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #0d1b2a;
+      font-family: 'Federo', Georgia, serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 400;
+      color: #ffffff;
       margin-bottom: 1rem;
+      letter-spacing: 0.02em;
     }
+
     .intro-section p {
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.8;
+      font-size: 0.92rem;
+      color: #c5d5e5;
+      line-height: 1.9;
     }
 
     /* PUBLICATIONS GRID */
@@ -61,84 +100,95 @@
       padding: 0 1.5rem;
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
+      gap: 1.75rem;
     }
 
     .pub-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
       padding: 2rem 1.5rem;
       text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
+
     .pub-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .pub-card img {
-      width: 110px;
-      height: 110px;
+      width: 100px;
+      height: 100px;
       object-fit: contain;
       border-radius: 50%;
-      margin-bottom: 1.25rem;
-      background: #f0eeea;
+      margin-bottom: 1.1rem;
+      background: rgba(255,255,255,0.08);
       padding: 6px;
     }
 
     .pub-card h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #0d1b2a;
+      font-family: 'Federo', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ffffff;
       margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
     }
 
     .pub-card p {
-      font-size: 0.88rem;
-      color: #555;
-      line-height: 1.6;
+      font-size: 0.82rem;
+      color: #b0c8dd;
+      line-height: 1.7;
       flex-grow: 1;
       margin-bottom: 1.25rem;
     }
 
     .pub-card a {
       display: inline-block;
-      background: #0d1b2a;
+      background: rgba(255,255,255,0.12);
       color: #fff;
       text-decoration: none;
-      padding: 0.5rem 1.4rem;
+      padding: 0.45rem 1.3rem;
       border-radius: 25px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.03em;
-      transition: background 0.2s;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: background 0.2s, border-color 0.2s;
     }
+
     .pub-card a:hover {
-      background: #1a3a5c;
+      background: rgba(255,255,255,0.22);
+      border-color: rgba(255,255,255,0.5);
     }
 
     /* FOOTER */
     footer {
-      background: #0d1b2a;
-      color: #7a8fa0;
+      border-top: 1px solid rgba(255,255,255,0.1);
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.8rem;
-      line-height: 2;
+      color: #7a8fa0;
+      font-size: 0.78rem;
+      line-height: 2.2;
     }
+
     footer a {
       color: #a0b8cc;
       text-decoration: none;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
 
     @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; padding: 2rem 1rem; }
       .publications { grid-template-columns: 1fr; }
     }
   </style>
@@ -146,13 +196,16 @@
 <body>
 
 <header>
-  <h1>List Growth Solutions LLC</h1>
-  <p class="tagline">Connecting readers with content they love, every single day.</p>
+  <img class="logo" src="/lsg_logo.png" alt="List Growth Solutions LLC logo" />
+  <div class="header-text">
+    <h1>List Growth Solutions LLC</h1>
+    <p>Connecting readers with content they love, every single day.</p>
+  </div>
 </header>
 
 <div class="intro-section">
   <h2>We Publish Newsletters People Actually Look Forward To</h2>
-  <p>At List Growth Solutions LLC, we build and grow email publications that inform, entertain, and inspire. From daily news briefings and market insights to nostalgic stories and lifestyle tips, our seven newsletters reach engaged readers across the country — straight to their inbox, every day.</p>
+  <p>At List Growth Solutions LLC, we build and grow email publications that inform, entertain, and inspire. From daily news briefings and market insights to nostalgic stories and lifestyle tips, our seven newsletters reach engaged readers across the country &mdash; straight to their inbox, every day.</p>
 </div>
 
 <div class="publications">
@@ -160,14 +213,14 @@
   <div class="pub-card">
     <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,fit=scale-down,onerror=redirect/uploads/asset/file/015315e2-55de-4ba3-b9ca-d1273e225930/Beige_and_Dark_Brown_Simple_Minimalist_Bookstore_Circle_Logo__45_.png" alt="Morning Bullets logo" />
     <h3>Morning Bullets</h3>
-    <p>Where politics meets investing. Five sharp bullets every morning covering market movers, policy catalysts, and actionable trade ideas — before your first coffee.</p>
+    <p>Where politics meets investing. Five sharp bullets every morning covering market movers, policy catalysts, and actionable trade ideas &mdash; before your first coffee.</p>
     <a href="https://morningbullets.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
   <div class="pub-card">
     <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,quality=80,format=auto,onerror=redirect/uploads/asset/file/f3ecb8f7-3f84-436a-b4cb-1dcea5e8d50c/BU800x800Logov2.png" alt="Brief Updates logo" />
     <h3>Brief Updates</h3>
-    <p>A fair, well-rounded look at today's news. Brief Updates cuts through the noise to bring you balanced, concise coverage of the stories shaping the world right now.</p>
+    <p>A fair, well-rounded look at today&rsquo;s news. Brief Updates cuts through the noise to bring you balanced, concise coverage of the stories shaping the world right now.</p>
     <a href="https://briefupdates.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
@@ -181,7 +234,7 @@
   <div class="pub-card">
     <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/publication/logo/e5634245-2ca2-4f41-87cf-5ffbb2f90e07/DR800x800Logo.png" alt="The Daily Recap logo" />
     <h3>The Daily Recap</h3>
-    <p>Never lose sleep about what you might have missed. The Daily Recap delivers a comprehensive, easy-to-read roundup of the day's most important news — so you're always in the know.</p>
+    <p>Never lose sleep about what you might have missed. The Daily Recap delivers a comprehensive, easy-to-read roundup of the day&rsquo;s most important news &mdash; so you&rsquo;re always in the know.</p>
     <a href="https://dailyrecap.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
@@ -195,14 +248,14 @@
   <div class="pub-card">
     <img src="https://media.beehiiv.com/cdn-cgi/image/format=auto,onerror=redirect/uploads/asset/file/0897d591-7bea-45b2-b705-c36b798e5be1/newnewLogo.png" alt="Those Were the Days logo" />
     <h3>Those Were the Days</h3>
-    <p>Your nightly trip back to the good old days. Seven heart-warming memories from America's Golden Era (1950s–1980s), delivered every evening at 7 PM to end your day with a smile.</p>
+    <p>Your nightly trip back to the good old days. Seven heart-warming memories from America&rsquo;s Golden Era (1950s&ndash;1980s), delivered every evening at 7 PM to end your day with a smile.</p>
     <a href="https://the7at7.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
   <div class="pub-card">
     <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/5721e24b-4c2e-4b7f-b17c-9e510239fdad/todays-time-capsule-fb-profile-060525-v1__1_.jpg" alt="Today's Time Capsule logo" />
-    <h3>Today's Time Capsule</h3>
-    <p>Fun history facts and stories flying your way! Daily doses of historic tales they didn't teach in school, plus bite-sized history games and brain teasers exclusively for subscribers.</p>
+    <h3>Today&rsquo;s Time Capsule</h3>
+    <p>Fun history facts and stories flying your way! Daily doses of historic tales they didn&rsquo;t teach in school, plus bite-sized history games and brain teasers exclusively for subscribers.</p>
     <a href="https://todaystimecapsule.com/" target="_blank" rel="noopener">Visit Publication</a>
   </div>
 
@@ -210,6 +263,7 @@
 
 <footer>
   &copy; 2025 List Growth Solutions LLC &bull; All Rights Reserved<br/>
+  <a href="/terms.html">Advertiser Terms &amp; Conditions</a> &bull;
   <a href="/privacy.html">Privacy Policy</a> &bull;
   <a href="/user-terms.html">User Terms &amp; Conditions</a>
 </footer>

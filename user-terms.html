@@ -5,92 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>User Terms and Conditions | List Growth Solutions LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, 'Times New Roman', serif; background: #f8f7f4; color: #1a1a1a; line-height: 1.75; }
-    header { background: #0d1b2a; color: #fff; padding: 2.5rem 1.5rem; text-align: center; }
-    header h1 { font-size: clamp(1.25rem, 3vw, 1.9rem); font-family: Arial, sans-serif; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-    header p { margin-top: .5rem; font-size: .9rem; color: #a0b0c0; font-family: Arial, sans-serif; }
+    body { font-family: Verdana, Geneva, Tahoma, sans-serif; color: #1a1a1a; line-height: 1.7; background-color: #0d1b2a; background-image: url('/ny_background.jpeg'); background-size: cover; background-attachment: fixed; background-position: center center; }
+    body::before { content: ''; position: fixed; inset: 0; background: rgba(10, 18, 30, 0.82); z-index: 0; pointer-events: none; }
+    header, .container, footer { position: relative; z-index: 1; }
+    header { padding: 2.5rem 2rem; display: flex; align-items: center; gap: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); max-width: 1100px; margin: 0 auto; }
+    header img.logo { width: 70px; height: 70px; object-fit: contain; flex-shrink: 0; }
+    header .header-text h1 { font-family: 'Federo', Georgia, serif; font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-weight: 400; color: #ffffff; letter-spacing: 0.04em; text-transform: uppercase; }
+    header .header-text p { margin-top: 0.3rem; font-size: 0.85rem; color: #a0b8cc; font-style: italic; }
     .container { max-width: 860px; margin: 3rem auto; padding: 0 1.5rem 4rem; }
-    .intro { background: #fff; border-left: 4px solid #0d1b2a; padding: 1.5rem 2rem; margin-bottom: 2.5rem; font-size: .95rem; line-height: 1.8; border-radius: 0 4px 4px 0; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-    .intro strong { display: block; font-family: Arial, sans-serif; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: #0d1b2a; margin-bottom: .75rem; }
-    .section { background: #fff; border-radius: 6px; padding: 1.75rem 2rem; margin-bottom: 1.25rem; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-    .section h2 { font-family: Arial, sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: #0d1b2a; margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 1px solid #e5e0d8; }
-    .section p { font-size: .93rem; color: #2c2c2c; margin-bottom: 1rem; }
+    .intro { background: rgba(255,255,255,0.07); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.12); border-left: 4px solid #a0b8cc; padding: 1.5rem 2rem; margin-bottom: 2rem; font-size: .95rem; line-height: 1.8; border-radius: 0 8px 8px 0; color: #c5d5e5; }
+    .intro strong { display: block; font-family: 'Federo', Georgia, serif; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; color: #ffffff; margin-bottom: .75rem; }
+    .section { background: rgba(255,255,255,0.07); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 1.75rem 2rem; margin-bottom: 1.25rem; color: #c5d5e5; }
+    .section h2 { font-family: 'Federo', Georgia, serif; font-size: .85rem; text-transform: uppercase; letter-spacing: .1em; color: #ffffff; margin-bottom: .9rem; padding-bottom: .6rem; border-bottom: 1px solid rgba(255,255,255,0.15); font-weight: 400; }
+    .section p { font-size: .92rem; margin-bottom: 1rem; }
     .section p:last-child { margin-bottom: 0; }
-    .section ul { font-size: .93rem; color: #2c2c2c; padding-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem; }
+    .section ul { font-size: .92rem; padding-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 1rem; }
     .section ul li { margin-bottom: 0.4rem; }
-    footer { text-align: center; padding: 2rem 1rem; background: #0d1b2a; color: #7a8fa0; font-family: Arial, sans-serif; font-size: .8rem; }
-    @media (max-width: 600px) { .section { padding: 1.25rem; } .intro { padding: 1.25rem; } }
+    footer { border-top: 1px solid rgba(255,255,255,0.1); text-align: center; padding: 2rem 1rem; color: #7a8fa0; font-size: 0.78rem; line-height: 2.2; position: relative; z-index: 1; }
+    footer a { color: #a0b8cc; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { header { flex-direction: column; text-align: center; padding: 2rem 1rem; } .section { padding: 1.25rem; } .intro { padding: 1.25rem; } }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>List Growth Solutions LLC</h1>
-  <p>User Terms and Conditions</p>
+  <img class="logo" src="/lsg_logo.png" alt="List Growth Solutions LLC logo" />
+  <div class="header-text">
+    <h1>List Growth Solutions LLC</h1>
+    <p>User Terms and Conditions</p>
+  </div>
 </header>
-
 <div class="container">
-
   <div class="intro">
     <strong>Last Updated: April 1, 2026</strong>
     These Terms and Conditions govern the use of websites and services operated by List Growth Solutions LLC. By accessing or using the Service, you agree to be bound by these Terms and Conditions. If you disagree with any part of the Terms and Conditions, you may not access the Service.
   </div>
-
-  <div class="section">
-    <h2>1. Terms</h2>
-    <p>These Terms and Conditions govern the use of websites and services (the &ldquo;Service&rdquo;) operated by List Growth Solutions LLC. Your access to and use of the Service is conditioned on your acceptance and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users, and others who access and/or use the Service.</p>
-    <p>By accessing or using the Service, you agree to be bound by these Terms and Conditions. If you disagree with any part of the Terms and Conditions, you may not access the Service. List Growth Solutions LLC has the right to revise and update these Terms and Conditions at any time without prior notification; therefore, you should visit this page periodically to review these Terms and Conditions.</p>
-  </div>
-
-  <div class="section">
-    <h2>2. Limited License</h2>
-    <p>Permission is granted to temporarily download one copy of the materials on List Growth Solutions LLC&rsquo;s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
-    <ul>
-      <li>modify or copy the materials;</li>
-      <li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li>
-      <li>remove any copyright or other proprietary notations from the materials; or</li>
-      <li>transfer the materials to another person or &ldquo;mirror&rdquo; the materials on any other server.</li>
-    </ul>
-    <p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by List Growth Solutions LLC at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format. The materials on the Service are protected by applicable copyright laws.</p>
-  </div>
-
-  <div class="section">
-    <h2>3. Disclaimer of Warranties</h2>
-    <p>The materials on List Growth Solutions LLC&rsquo;s websites and emails are provided on an &ldquo;as is&rdquo; basis. List Growth Solutions LLC makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
-    <p>Further, List Growth Solutions LLC does not warrant or make any representations concerning the accuracy, completeness, correctness, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site. The materials appearing on List Growth Solutions LLC&rsquo;s website could include technical, typographical, or photographic errors. List Growth Solutions LLC may make changes to the materials contained on its website at any time without notice. However, List Growth Solutions LLC does not make any commitment to update the materials.</p>
-  </div>
-
-  <div class="section">
-    <h2>4. Editorial Content</h2>
-    <p>List Growth Solutions LLC is a publisher. Any information presented on any websites owned, operated, or maintained by List Growth Solutions LLC, including but not limited to morningbullets.com, briefupdates.com, thebalancedbrief.com, dailyrecap.com, localconservative.com, the7at7.com, todaystimecapsule.com, and other owned websites, and via email is generic, nonspecific, and for general information purposes only.</p>
-    <p>We do not advocate the purchase or sale of any security or investment for any specific individual, and no financial information here should be considered personal advice. Stocks, futures, currencies, commodities, CFDs, options and all types of investment trading can have large potential rewards, but also carry large potential risks.</p>
-    <p>List Growth Solutions LLC has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. List Growth Solutions LLC has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. The inclusion of any link does not imply endorsement by List Growth Solutions LLC of the site. Use of any such linked website is at the user&rsquo;s own risk. We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p>
-  </div>
-
-  <div class="section">
-    <h2>5. Indemnification</h2>
-    <p>In no event shall List Growth Solutions LLC or its licensors, suppliers, or any third parties mentioned be liable for any damages (including, without limitation, damages for loss of data or profit, personal injury, wrongful death, or business interruption), whether based on warranty, contract, tort, or any other legal theory, arising out of the use or inability to use the materials on List Growth Solutions LLC&rsquo;s website or email, even if List Growth Solutions LLC or an authorized representative has been notified orally or in writing of the possibility of such damage.</p>
-    <p>List Growth Solutions LLC is based in the United States and makes no claims that the content is appropriate or may be downloaded outside of the USA. Access to the content may not be legal by certain persons or in certain countries. If you access any websites owned, operated, or maintained by List Growth Solutions LLC from outside the United States, you do so at your own risk and are responsible for compliance with the laws of your jurisdiction.</p>
-    <p>All provisions survive the expiration or termination of these Terms and Conditions for any reason whatsoever. Upon acceptance of these Terms and Conditions, you consent to defend, indemnify, and hold List Growth Solutions LLC, its officers, directors, employees, agents, licensors, and suppliers harmless from and against any claims, actions or demands, liabilities, and settlements, including without limitation, reasonable legal and accounting fees resulting from, or alleged to result from, your violation of these Terms and Conditions.</p>
-  </div>
-
-  <div class="section">
-    <h2>6. Governing Law</h2>
-    <p>These Terms and Conditions are governed by and construed in accordance with the laws of the State of Florida and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p>
-  </div>
-
-  <div class="section">
-    <h2>7. Modifications</h2>
-    <p>List Growth Solutions LLC may revise these Terms and Conditions for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms and Conditions. If you do not agree to the new terms, please stop using the Service.</p>
-  </div>
-
+  <div class="section"><h2>1. Terms</h2><p>These Terms and Conditions govern the use of websites and services (the &ldquo;Service&rdquo;) operated by List Growth Solutions LLC. Your access to and use of the Service is conditioned on your acceptance and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users, and others who access and/or use the Service.</p><p>By accessing or using the Service, you agree to be bound by these Terms and Conditions. If you disagree with any part of the Terms and Conditions, you may not access the Service. List Growth Solutions LLC has the right to revise and update these Terms and Conditions at any time without prior notification; therefore, you should visit this page periodically to review these Terms and Conditions.</p></div>
+  <div class="section"><h2>2. Limited License</h2><p>Permission is granted to temporarily download one copy of the materials on List Growth Solutions LLC&rsquo;s website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p><ul><li>modify or copy the materials;</li><li>use the materials for any commercial purpose, or for any public display (commercial or non-commercial);</li><li>remove any copyright or other proprietary notations from the materials; or</li><li>transfer the materials to another person or &ldquo;mirror&rdquo; the materials on any other server.</li></ul><p>This license shall automatically terminate if you violate any of these restrictions and may be terminated by List Growth Solutions LLC at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format. The materials on the Service are protected by applicable copyright laws.</p></div>
+  <div class="section"><h2>3. Disclaimer of Warranties</h2><p>The materials on List Growth Solutions LLC&rsquo;s websites and emails are provided on an &ldquo;as is&rdquo; basis. List Growth Solutions LLC makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p><p>Further, List Growth Solutions LLC does not warrant or make any representations concerning the accuracy, completeness, correctness, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site. The materials appearing on List Growth Solutions LLC&rsquo;s website could include technical, typographical, or photographic errors. List Growth Solutions LLC may make changes to the materials contained on its website at any time without notice. However, List Growth Solutions LLC does not make any commitment to update the materials.</p></div>
+  <div class="section"><h2>4. Editorial Content</h2><p>List Growth Solutions LLC is a publisher. Any information presented on any websites owned, operated, or maintained by List Growth Solutions LLC, including but not limited to morningbullets.com, briefupdates.com, thebalancedbrief.com, dailyrecap.com, localconservative.com, the7at7.com, todaystimecapsule.com, and other owned websites, and via email is generic, nonspecific, and for general information purposes only.</p><p>We do not advocate the purchase or sale of any security or investment for any specific individual, and no financial information here should be considered personal advice. Stocks, futures, currencies, commodities, CFDs, options and all types of investment trading can have large potential rewards, but also carry large potential risks.</p><p>List Growth Solutions LLC has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. List Growth Solutions LLC has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party websites or services. The inclusion of any link does not imply endorsement by List Growth Solutions LLC of the site. Use of any such linked website is at the user&rsquo;s own risk. We strongly advise you to read the terms and conditions and privacy policies of any third-party websites or services that you visit.</p></div>
+  <div class="section"><h2>5. Indemnification</h2><p>In no event shall List Growth Solutions LLC or its licensors, suppliers, or any third parties mentioned be liable for any damages (including, without limitation, damages for loss of data or profit, personal injury, wrongful death, or business interruption), whether based on warranty, contract, tort, or any other legal theory, arising out of the use or inability to use the materials on List Growth Solutions LLC&rsquo;s website or email, even if List Growth Solutions LLC or an authorized representative has been notified orally or in writing of the possibility of such damage.</p><p>List Growth Solutions LLC is based in the United States and makes no claims that the content is appropriate or may be downloaded outside of the USA. Access to the content may not be legal by certain persons or in certain countries. If you access any websites owned, operated, or maintained by List Growth Solutions LLC from outside the United States, you do so at your own risk and are responsible for compliance with the laws of your jurisdiction.</p><p>All provisions survive the expiration or termination of these Terms and Conditions for any reason whatsoever. Upon acceptance of these Terms and Conditions, you consent to defend, indemnify, and hold List Growth Solutions LLC, its officers, directors, employees, agents, licensors, and suppliers harmless from and against any claims, actions or demands, liabilities, and settlements, including without limitation, reasonable legal and accounting fees resulting from, or alleged to result from, your violation of these Terms and Conditions.</p></div>
+  <div class="section"><h2>6. Governing Law</h2><p>These Terms and Conditions are governed by and construed in accordance with the laws of the State of Florida and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.</p></div>
+  <div class="section"><h2>7. Modifications</h2><p>List Growth Solutions LLC may revise these Terms and Conditions for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these Terms and Conditions. If you do not agree to the new terms, please stop using the Service.</p></div>
 </div>
-
 <footer>
-  &copy; 2025 List Growth Solutions LLC &bull; All Rights Reserved
+  &copy; 2025 List Growth Solutions LLC &bull; All Rights Reserved<br/>
+  <a href="/privacy.html">Privacy Policy</a> &bull;
+  <a href="/user-terms.html">User Terms &amp; Conditions</a>
 </footer>
-
 </body>
 </html>
